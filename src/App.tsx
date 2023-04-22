@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
         <div className="primeNav">
-            { links.map((link) => <Link content={link} href={"#"}></Link>) }
+            { links.map((link) => <Link fz={"100px"} content={link} href={"#"}></Link>) }
         </div>
 
     </div>
