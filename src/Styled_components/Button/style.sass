@@ -1,4 +1,5 @@
 $pink: #df9eff
+$grey: #e8e8e8
 button
   padding: 0
   border: none
@@ -9,40 +10,32 @@ button
 
 
 .BUTTON
-  font-family: 'Raleway', sans-serif
   position: relative
+  font-weight: 500
+  background-color: $grey
+  border-radius: 20px
+  padding: 5px 20px
   overflow: hidden
-  button
-    white-space: nowrap
-    position: absolute
-    transition: all 0.35s ease-in-out
-    font-weight: 500
-    padding: 0
+  p
     margin: 0
-    color: white
-    padding: 5px 15px
-    border-radius: 20px
+    padding: 0
   .BLOCK
-    font-weight: 500
-    white-space: nowrap
     color: transparent
-    margin: 0
-    padding: 0
-    padding: 5px 15px
-
-  .FIRST
+  .FIRST, .SECOND
+    transition: all 0.35s ease-in-out
+    padding: 5px 20px
+    border-radius: 20px
+    position: absolute
     top: 0
     left: 0
-    background-color: black
-  .SECOND
-    color: #df9eff
 
-    background-color: red
+  .FIRST
+    background-color: $grey
+  .SECOND
+    background-color: $pink
+    color: white
     top: 100%
-    left: 0
 
 .BUTTON:hover
-  .FIRST
-    transform: translateY(-100%)
-  .SECOND
+  .FIRST, .SECOND
     transform: translateY(-100%)

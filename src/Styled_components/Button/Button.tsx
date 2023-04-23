@@ -10,10 +10,10 @@ interface buttonProps {
 
 export default function Button({ content, onclick=()=>{}, theme="light", fz="0.9em" } : buttonProps) {
     return (
-        <div className={"BUTTON"} style={{ fontSize: fz }}>
-            <p className={"BLOCK"}>{content}</p>
-            <button onClick={onclick} className={"FIRST"}>{content}</button>
-            <button onClick={onclick} className={"SECOND"}>{content}</button>
-        </div>
+        <button className="BUTTON">
+            <p className="BLOCK">{content}</p>
+            <p className="FIRST">{content}</p>
+            <p className="SECOND">{content}</p>
+        </button>
     )
 }
