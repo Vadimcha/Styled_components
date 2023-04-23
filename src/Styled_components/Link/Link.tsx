@@ -1,6 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import './style.sass'
-import {exists} from "fs";
+import React from 'react';
+import './linkStyle.sass'
 
 interface linkProps {
     content: string,
@@ -10,7 +9,7 @@ interface linkProps {
 
 }
 
-export default function Link({ content, href, theme = "light", fz = "1.2em" }: linkProps) {
+export default function Link({ content, href, theme = "light", fz = "min(max(1.5vw, 14px), 20px)" }: linkProps) {
     return (
 
         <div className="ssilka" style={{fontSize: fz }}>
