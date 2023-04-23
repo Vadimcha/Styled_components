@@ -1,37 +1,48 @@
-.ssilka
+$pink: #df9eff
+button
+  padding: 0
+  border: none
+  font: inherit
+  color: inherit
+  background-color: transparent
+  cursor: pointer
+
+
+.BUTTON
   font-family: 'Raleway', sans-serif
   position: relative
   overflow: hidden
-  a
+  button
     white-space: nowrap
     position: absolute
-    text-decoration: none
     transition: all 0.35s ease-in-out
     font-weight: 500
     padding: 0
     margin: 0
+    color: white
+    padding: 5px 15px
+    border-radius: 20px
   .BLOCK
     font-weight: 500
     white-space: nowrap
     color: transparent
     margin: 0
     padding: 0
+    padding: 5px 15px
 
   .FIRST
     top: 0
     left: 0
-    pointer-events: auto
+    background-color: black
   .SECOND
     color: #df9eff
+
+    background-color: red
     top: 100%
     left: 0
-    pointer-events: none
 
-.ssilka:hover
+.BUTTON:hover
   .FIRST
     transform: translateY(-100%)
-    pointer-events: none
-
   .SECOND
     transform: translateY(-100%)
-    pointer-events: auto
