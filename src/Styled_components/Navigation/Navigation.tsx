@@ -20,9 +20,10 @@ export default function NavBar({logo, nav, theme="light"} : navProps) {
             </div>
             <div className={"NAVBAR-mini"+((theme == "light" ? "" : " NAVBAR-dark"))}>
                 <div className={"LOGO"} style={{ color: (theme == "light" ? "black" : "white") }}>{logo}</div>
-                <Button fz={"max(3.5vw, 16px)"} content={"Menu"} theme={theme} onclick={() => setMini(!mini)} />
+                <Button fz={"max(3.5vw, 16px)"} content={"Menu"} theme={"light"} onclick={() => setMini(!mini)} />
             </div>
             <div className={"NAV-mini"+ (theme == "light" ? " NAV-mini" : " NAV-mini-dark") + (mini ? " NAV-mini-active" : "")}>
+                <Button content={"close"} theme={"light"} onclick={() => setMini(!mini) }/>
                 {nav}
             </div>
         </div>
