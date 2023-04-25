@@ -1,4 +1,5 @@
 $grey: #e8e8e8
+$pink: #df9eff
 
 .NAVBAR
   display: flex
@@ -30,6 +31,7 @@ $grey: #e8e8e8
   flex-direction: row
   gap: 15px
   &-mini
+    display: none
     width: 100vw
     height: 40vh
     top: calc(-2px + -40vh)
@@ -54,8 +56,22 @@ $grey: #e8e8e8
       a, p
         font-size: calc(min(5.5vw, 20px)) !important
 
+
+    &_icon
+      position: absolute
+      top: 20px
+      right: 20px
+      transition: all 0.35s ease-in-out
+      &:hover
+        transform: rotate(90deg)
+
+
 @media only screen and (max-width: 650px)
   .NAVBAR
     display: none
     &-mini
       display: flex
+
+  .NAV
+    &-mini
+      display: block

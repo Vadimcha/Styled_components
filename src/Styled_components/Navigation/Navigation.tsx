@@ -11,6 +11,7 @@ interface navProps {
 
 export default function NavBar({logo, nav, theme="light"} : navProps) {
     const [mini, setMini] = useState(false)
+    const [color_close, setColorClose] = useState(theme == "light" ? "black" : "white")
     return (
         <div>
             <div className={"NAVBAR"+(theme == "light" ? "" : " NAVBAR-dark")}>
@@ -25,7 +26,11 @@ export default function NavBar({logo, nav, theme="light"} : navProps) {
             </div>
             <div className={"NAV-mini"+ (theme == "light" ? " NAV-mini" : " NAV-mini-dark") + (mini ? " NAV-mini-active" : "")}>
                 <button className="NAV-mini_links" onClick={() => setMini(!mini)} >
-                    <CiCircleRemove color={(theme == "light" ? "black" : "white")} />
+                    <CiCircleRemove color={color_close} size="32px"
+                                    className={"NAV-mini_icon"}
+                                    onMouseEnter={()=>setColorClose("#df9eff")}
+                                    onMouseLeave={()=>setColorClose(theme == "light" ? "black" : "white")}
+                    />
                 </button>
                 <div className={"NAV-mini_links"}>{nav}</div>
             </div>

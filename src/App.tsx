@@ -15,8 +15,8 @@ function App() {
         {/*</div>*/}
         <NavBar
             logo={<h2 style={{ cursor: "pointer" }}>This is logo</h2>}
-            nav={links.map((item) => <Link theme={"dark"} content={item} href={"#"}/>)}
-            theme={"dark"}
+            nav={links.map((item) => <Link theme={"light"} content={item} href={"#"}/>)}
+            theme={"light"}
         />
         <h1>Hello world!</h1>
     </div>
