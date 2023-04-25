@@ -8,7 +8,7 @@ interface buttonProps {
     theme?: "light" | "dark",
 }
 
-export default function Button({ content, onclick=()=>{}, theme="light", fz="0.9em" } : buttonProps) {
+export default function Button({ content, onclick=()=>{}, theme="light", fz="min(max(1.5vw, 14px), 20px)" } : buttonProps) {
     let bgColor = (theme == "light" ? "#e8e8e8" : "black")
     let Color = (theme == "light" ? "black" : "#e8e8e8")
     return (
