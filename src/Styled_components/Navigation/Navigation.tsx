@@ -17,7 +17,7 @@ export default function NavBar({logo, nav, theme="light"} : navProps) {
         <div>
             <div className={"NAVBAR"+(theme == "light" ? "" : " NAVBAR-dark")}>
                 <div style={{ display: "flex", gap: "5px", alignItems: "center" }}>
-                    <div className={"LOGO"} style={{ color: (theme == "light" ? "black" : "white"), fontSize: "max(1.7vw, 16px)", fontWeight: "bold" }}>{logo}</div>
+                    <div className={"LOGO"} style={{ color: (theme == "light" ? "black" : "white"), fontWeight: "bold" }}>{logo}</div>
                     <ThemeBtn />
                 </div>
                 <div className={"NAV"}>
@@ -26,7 +26,7 @@ export default function NavBar({logo, nav, theme="light"} : navProps) {
             </div>
             <div className={"NAVBAR-mini"+((theme == "light" ? "" : " NAVBAR-dark"))}>
                 <div style={{ display: "flex", gap: "5px", alignItems: "center" }}>
-                    <div className={"LOGO"} style={{ color: (theme == "light" ? "black" : "white"), fontSize: "max(1.7vw, 16px)", fontWeight: "bold" }}>{logo}</div>
+                    <div className={"LOGO"} style={{ color: (theme == "light" ? "black" : "white"), fontSize: "min(5vw, 20px)", fontWeight: "bold" }}>{logo}</div>
                 </div>
                 <button className="NAVBAR-mini_menu" onClick={() => setMini(!mini)}>
                     <CiMenuBurger color={color_menu} size={"32px"}
@@ -46,7 +46,7 @@ export default function NavBar({logo, nav, theme="light"} : navProps) {
                 </button>
                 <div className={"NAV-mini_links"}>
                     {nav}
-                    <ThemeBtn />
+                    <ThemeBtn size={"36"}/>
                 </div>
 
             </div>

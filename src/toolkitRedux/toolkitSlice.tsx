@@ -8,9 +8,8 @@ const toolkitSlice = createSlice({
     },
     reducers: {
         switch_theme(state) {
-            console.log(state.theme)
             state.theme = (state.theme === "light" ? "dark" : "light")
-        }
+        },
     }
 })
 
