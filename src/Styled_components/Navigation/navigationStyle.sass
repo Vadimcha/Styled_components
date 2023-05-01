@@ -10,7 +10,7 @@ $pink: #df9eff
   justify-content: space-between
   padding: 20px 50px
   border-bottom: 2px solid $grey
-
+  transition: all 0.35s ease-in-out
   background-color: white
   &-dark
     background-color: black
@@ -46,6 +46,7 @@ $pink: #df9eff
     top: calc(-2px + -40vh)
     transition: all 0.5s ease-in-out
     position: absolute
+    z-index: 1
     background: rgba(218, 218, 218, 0.4)
     // Make sure this color has an opacity of less than 1
     backdrop-filter: blur(5px) // This be the blur

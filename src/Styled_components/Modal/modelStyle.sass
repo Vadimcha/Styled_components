@@ -1,5 +1,6 @@
 .backDrop
   transition: all 0.35s ease-in-out !important
+
   width: 100%
   height: 100%
   position: fixed
@@ -7,15 +8,18 @@
   top: 0
   right: 0
   bottom: 0
+
+  display: flex
   justify-content: center
   align-items: center
   &-light
     background: rgba(218, 218, 218, 0.4)
+    color: black
   &-dark
     background: rgba(0, 0, 0, 0.8)
+    color: white
 
   backdrop-filter: blur(5px) // This be the blur
 
 .Modal
   display: block
-  color: white

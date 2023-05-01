@@ -21,9 +21,9 @@ export default function Modal({ children, on_what } : ModalProps) {
             <button onClick={() => setVisible(true)}>
                 {on_what}
             </button>
-            <div className={"backDrop" + " backDrop-" + theme} style={{ display: (visible ? "flex" : "none"), opacity: (visible ? "1" : "0") }}>
+            <div className={"backDrop" + " backDrop-" + theme} style={{ pointerEvents: (visible ? "auto" : "none"), opacity: (visible ? "1" : "0") }}>
                 <button className="NAV-mini_close" onClick={() => setVisible(!visible)} >
-                    <CiCircleRemove color={color_close} size="32px"
+                    <CiCircleRemove color={color_close} size="max(30px, 2.5vw)"
                                     className={"NAV-mini_icon"}
                                     onMouseEnter={()=>setColorClose("#df9eff")}
                                     onMouseLeave={()=>setColorClose(theme == "light" ? "black" : "white")}
