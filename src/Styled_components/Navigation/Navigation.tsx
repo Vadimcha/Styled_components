@@ -6,10 +6,11 @@ import ThemeBtn from "../SwitchThemeButton/SwitchThemeButton";
 interface navProps {
     logo: React.ReactNode | string,
     nav: React.ReactNode,
-    theme?: "light" | "dark"
+    theme?: "light" | "dark",
+    profile?: React.ReactNode
 }
 
-export default function NavBar({logo, nav, theme="light"} : navProps) {
+export default function NavBar({logo, nav, theme="light", profile} : navProps) {
     const [mini, setMini] = useState(false)
     const [color_close, setColorClose] = useState(theme == "light" ? "black" : "white")
     const [color_menu, setColorMenu] = useState(theme == "light" ? "black" : "white")
@@ -20,8 +21,11 @@ export default function NavBar({logo, nav, theme="light"} : navProps) {
                     <div className={"LOGO"} style={{ color: (theme == "light" ? "black" : "white"), fontWeight: "bold" }}>{logo}</div>
                     <ThemeBtn />
                 </div>
-                <div className={"NAV"}>
-                    {nav}
+                <div>
+                    <div className={"NAV"}>
+                        {nav}
+                        {profile}
+                    </div>
                 </div>
             </div>
             <div className={"NAVBAR-mini"+((theme == "light" ? "" : " NAVBAR-dark"))}>
@@ -46,6 +50,7 @@ export default function NavBar({logo, nav, theme="light"} : navProps) {
                 </button>
                 <div className={"NAV-mini_links"}>
                     {nav}
+                    {profile}
                     <ThemeBtn size={"36"}/>
                 </div>
 
